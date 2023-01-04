@@ -1,0 +1,34 @@
+{
+  "name": "create-spidergram",
+  "version": "0.7.0",
+  "description": "Initialize a new Spidergram based project",
+  "main": "index.js",
+  "scripts": {
+    "create": "node index.js"
+  },
+  "workspaces": [
+    "packages/boilerplate-js",
+    "packages/boilerplate-ts",
+    "packages/example-audit-ts",
+    "packages/example-plugins-ts"
+  ],
+  "author": {
+    "name": "Autogram",
+    "email": "team@autogram.is",
+    "url": "https://autogram.is"
+  },
+  "contributors": [
+    "Jeff Eaton <jeff@autogram.is> (http://eaton.fyi)",
+    "Ethan Marcotte <karen@autogram.is> (https://ethanmarcotte.com)",
+    "Karen McGrane <karen@autogram.is> (https://karenmcgrane.com)"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/autogram-is/create-spidergram"
+  },
+  "bugs": {
+    "url": "https://github.com/autogram-is/create-spidergram/issues"
+  },
+  "homepage": "https://spidergram.dev"
+}

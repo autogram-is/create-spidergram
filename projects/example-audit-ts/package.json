@@ -1,0 +1,9 @@
+{
+  "name": "create-spidergram-example-audit-ts",
+  "version": "0.7.0",
+  "description": "A scripted site audit, powered by Spidergram.",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "create-spidergram-boilerplate-js",
+  "version": "0.7.0",
+  "description": "A simple project that crawls one or more sites, then exports a summary report.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "crawl": "node index.js"
+  },
+  "dependencies": {
+    "spidergram": "github:autogram-is/spidergram#0.7.0-dev"
+  }
+}
