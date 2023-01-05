@@ -1,6 +1,6 @@
 {
   "name": "create-spidergram-boilerplate-js",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Simple crawler",
   "main": "index.js",
   "type": "module",
