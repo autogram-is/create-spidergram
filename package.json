@@ -7,6 +7,9 @@
   "scripts": {
     "create": "node index.js"
   },
+  "bin": {
+    "create-spidergram": "./bin/create-spidergram.js"
+  },
   "workspaces": [
     "packages/boilerplate-js",
     "packages/boilerplate-ts",
