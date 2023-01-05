@@ -1,7 +1,7 @@
 {
   "name": "create-spidergram-report-ts",
   "version": "0.7.0",
-  "description": "A Spidergram-based project that uses custom query and visualization plugins to generate a report.",
+  "description": "Custom report example (Typescript)",
   "main": "dist/index.js",
   "scripts": {
     "crawl": "ts-node index.ts",

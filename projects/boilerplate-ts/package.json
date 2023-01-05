@@ -1,7 +1,7 @@
 {
   "name": "create-spidergram-boilerplate-ts",
   "version": "0.7.0",
-  "description": "A simple project that crawls one or more sites, then exports a summary report.",
+  "description": "Simple crawler (Typescript)",
   "main": "dist/index.js",
   "scripts": {
     "crawl": "ts-node index.ts",
