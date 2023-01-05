@@ -46,8 +46,8 @@ async function setup() {
       choices: [
         { name: 'Simple crawler' , value: 'boilerplate' },
         { name: 'Simple crawler (Typescript)' , value: 'boilerplate-ts' },
-        { name: 'Queries and charts example (Typescript)' , value: 'example-plugins-ts' },
-        { name: 'Site audit example (Typescript)' , value: 'example-audit-ts' }
+        { name: 'Custom report example (Typescript)' , value: 'report-ts' },
+        { name: 'Audit example (Typescript)' , value: 'audit-ts' }
       ],
       default: template
     }
@@ -57,7 +57,7 @@ async function setup() {
 }
 
 function clone(name, template) {
-  const ignore = ['./DS_Store', 'node_modules'];
+  const ignore = ['./DS_Store', 'node_modules', 'dist'];
   const templateDir = path.join(__dirname, 'projects', template);
   const targetDir = process.cwd();
 
