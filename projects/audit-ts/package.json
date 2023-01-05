@@ -5,5 +5,8 @@
   "main": "index.js",
   "scripts": {
     "run": "node index.js"
+  },
+  "dependencies": {
+    "spidergram": "^0.7.0"
   }
 }

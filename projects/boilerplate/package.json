@@ -8,6 +8,6 @@
     "crawl": "node index.js"
   },
   "dependencies": {
-    "spidergram": "github:autogram-is/spidergram#0.7.0-dev"
+    "spidergram": "^0.7"
   }
 }
