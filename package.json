@@ -3,6 +3,7 @@
   "version": "0.7.0",
   "description": "Initialize a new Spidergram based project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "create": "node index.js"
   },
@@ -30,5 +31,9 @@
   "bugs": {
     "url": "https://github.com/autogram-is/create-spidergram/issues"
   },
-  "homepage": "https://spidergram.dev"
+  "homepage": "https://spidergram.dev",
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "inquirer": "^9.1.4"
+  }
 }
