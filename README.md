@@ -1,6 +1,6 @@
-# Template web analysis projects for Spidergram
+# Build a custom web analysis tool with Spidergram
 
-[Spidergram](https://github.com/autogram-is/spidergram) is a toolbox for structural analysis of complex web properties. `create-spidergram` is a quick and easy way to set up a new Spidergram web crawler of your own.
+[Spidergram](https://github.com/autogram-is/spidergram) is a toolkit for crawling and analyzing complex web properties. `create-spidergram` is a quick and easy way to set up a new Spidergram project of your own.
 
 ## Usage
 1. Ensure you're running NodeJS 18 (`node -v`)
