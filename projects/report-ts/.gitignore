@@ -48,5 +48,7 @@ jspm_packages/
 # NPM Build lock
 package-lock.json
 
-
+# Spidergram files and build
 dist/
+storage/
+spidergram.json

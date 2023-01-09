@@ -3,6 +3,8 @@ import { getCrawlSummary } from './crawl-summary-query.js';
 import { GroupedBarChart } from './grouped-bar-chart.js';
 import process from 'node:process';
 
+await Project.config();
+
 const args = process.argv.slice(2);
 if (args.length == 0) {
   console.log('One or more target URLs must be entered.');

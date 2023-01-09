@@ -49,4 +49,7 @@ jspm_packages/
 package-lock.json
 
 
+# Spidergram files and build
 dist/
+storage/
+spidergram.json

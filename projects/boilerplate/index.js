@@ -1,4 +1,6 @@
-import { Spider } from 'spidergram';
+import { Project, Spider } from 'spidergram';
+
+await Project.config();
 
 const args = process.argv.slice(2);
 

@@ -1,6 +1,6 @@
 {
   "name": "create-spidergram",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "description": "Initialize a new Spidergram based project",
   "main": "index.js",
   "type": "module",

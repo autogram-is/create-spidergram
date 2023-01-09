@@ -46,8 +46,7 @@ async function setup() {
       choices: [
         { name: 'Simple crawler' , value: 'boilerplate' },
         { name: 'Simple crawler (Typescript)' , value: 'boilerplate-ts' },
-        { name: 'Custom report example (Typescript)' , value: 'report-ts' },
-        { name: 'Audit example (Typescript)' , value: 'audit-ts' }
+        { name: 'Custom report example (Typescript)' , value: 'report-ts' }
       ],
       default: template
     }
