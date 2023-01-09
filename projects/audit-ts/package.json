@@ -3,6 +3,9 @@
   "version": "0.7.1",
   "description": "Audit example (Typescript)",
   "main": "index.js",
+  "engines": {
+    "node": "^18.0.0"
+  },
   "scripts": {
     "run": "node index.js"
   },

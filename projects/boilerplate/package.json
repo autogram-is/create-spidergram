@@ -3,6 +3,9 @@
   "version": "0.7.1",
   "description": "Simple crawler",
   "main": "index.js",
+  "engines": {
+    "node": "^18.0.0"
+  },
   "type": "module",
   "scripts": {
     "crawl": "node index.js"

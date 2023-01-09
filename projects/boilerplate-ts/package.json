@@ -3,6 +3,9 @@
   "version": "0.7.1",
   "description": "Simple crawler (Typescript)",
   "main": "dist/index.js",
+  "engines": {
+    "node": "^18.0.0"
+  },
   "scripts": {
     "crawl": "ts-node index.ts",
     "build": "tsc"

@@ -68,6 +68,7 @@ function clone(name, template) {
     }
     copySync(templateDir, targetDir, { overwrite: true });
     const pkg = readJsonSync(path.join(targetDir, 'package.json'));
+    pkg.name = name;
     writeJsonSync(path.join(targetDir, 'package.json'), pkg, { spaces: 2 });
     for (const file of ignore) {
       removeSync(path.join(targetDir, file));
