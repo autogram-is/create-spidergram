@@ -1,16 +1,18 @@
 {
   "name": "create-spidergram-boilerplate-js",
-  "version": "0.7.1",
+  "version": "0.8.3",
   "description": "Simple crawler",
   "main": "index.js",
   "engines": {
-    "node": "^18.0.0"
+    "node": "^18.1.0"
   },
   "type": "module",
   "scripts": {
+    "startup": "docker-compose up -d",
+    "shutdown": "docker-compose stop",
     "crawl": "node index.js"
   },
   "dependencies": {
-    "spidergram": "^0.7"
+    "spidergram": "^0.8.3"
   }
 }

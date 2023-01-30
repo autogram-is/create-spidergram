@@ -1,7 +1,7 @@
 {
-  "name": "create-spidergram-boilerplate-ts",
+  "name": "create-spidergram-pipeline-ts",
   "version": "0.8.3",
-  "description": "Simple crawler (Typescript)",
+  "description": "Analysis pipeline demo (Typescript)",
   "main": "dist/index.js",
   "engines": {
     "node": "^18.1.0"
@@ -9,7 +9,12 @@
   "scripts": {
     "startup": "docker-compose up -d",
     "shutdown": "docker-compose stop",
-    "crawl": "ts-node-esm src/index.ts",
+    "pipeline": "ts-node-esm src/index.ts",
+    "gather": "ts-node-esm src/gather.ts",
+    "extract": "ts-node-esm src/extract.ts",
+    "enrich": "ts-node-esm src/enrich.ts",
+    "analyze": "ts-node-esm src/analyze.ts",
+    "report": "ts-node-esm src/report.ts",
     "build": "tsc"
   },
   "devDependencies": {
