@@ -58,7 +58,7 @@ async function setup() {
 function clone(name, template) {
   // Can't be too safe.
   const ignore = ['.DS_Store', 'storage', 'node_modules', 'dist'];
-  const templateDir = path.join(__dirname, 'projects', template);
+  const templateDir = path.join(__dirname, 'templates', template);
   const targetDir = process.cwd();
 
   readdir(targetDir, (err, files) => {
