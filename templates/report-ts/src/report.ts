@@ -22,12 +22,17 @@ export async function generateReports() {
     return r.url
   `);
 
-  // UrlHierarchyBuilder takes an array of URLs (or any object with a 'url'
-  // property) and builds a hierarchical tree based on the path structure.
+  // UrlHierarchyBuilder takes an array of URLs and builds a hierarchical
+  // tree from the path structure.
+  //
   // The output can be customized by passing configuration options into
   // the UrlHierarchyBuilder constructor, or the UrlHierarchyItem.render()
   // function.
-  const hierarchy = new HierarchyTools.UrlHierarchyBuilder().add(urls);
+  const hierarchy = new HierarchyTools.UrlHierarchyBuilder({
+    gaps: 'bridge',
+    subdomains: 'children'
+  }).add(urls);
+
   for (const root of hierarchy.findRoots()) {
     const fileName = `${root.name}-structure.txt`;
     await project.files('output').write(
@@ -65,6 +70,7 @@ export async function generateReports() {
     size: r.size,
     type: r.content.type,
     title: r.content.title,
+    headline: r.content.headline,
     published: r.content.published,
     author: r.content.author,
     description: r.content.description,
