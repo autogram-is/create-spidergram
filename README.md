@@ -8,3 +8,8 @@
 3. Create a new project directory, cd into it, and run `npx create-spidergram`. You'll be prompted for the project's name and your choice of project template.
 4. Run `npm install`
 5. Kick the tires with `npm run crawl <url>`, or dive right in to customizing the project.
+
+## The Templates
+- **Boilerplate** is a quick and dirt script to fire up a Spidergram crawler, grab the content of one or more sites, and print out a summary report of their URL structures.
+- **Boilerplate (Typescript)** is a Typescript version of Boilerplate, with no other functional differences.
+- **Crawl with Report (Typescript)** is a more complex example, that demonstrates custom data extraction and custom report generation in Excel format.
