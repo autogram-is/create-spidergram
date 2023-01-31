@@ -10,6 +10,6 @@
 5. Kick the tires with `npm run crawl <url>`, or dive right in to customizing the project.
 
 ## The Templates
-- **Boilerplate** is a quick and dirt script to fire up a Spidergram crawler, grab the content of one or more sites, and print out a summary report of their URL structures.
+- **Boilerplate** is a simple script that fires up a Spidergram crawler, grabs the contents of one or more sites, and prints out a summary report of their URL structures.
 - **Boilerplate (Typescript)** is a Typescript version of Boilerplate, with no other functional differences.
-- **Crawl with Report (Typescript)** is a more complex example, that demonstrates custom data extraction and custom report generation in Excel format.
+- **Crawl with Report (Typescript)** demonstrates custom data extraction and outputs more detailed reports in plaintext and Excel formats.
