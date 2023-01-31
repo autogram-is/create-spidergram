@@ -4,7 +4,7 @@
 
 ## Usage
 1. Ensure you're running NodeJS 18 (`node -v`)
-2. Install [ArangoDB](https://arangodb.com) via [direct download](https://www.arangodb.com/download-major/), [homebrew](https://formulae.brew.sh/formula/arangodb), or [Docker](https://hub.docker.com/_/arangodb).
-3. Create a new project directory and run `npx create-spidergram` or `npm init spidergram`; you'll be prompted for the project's name and your choice of project template.
+2. Install [ArangoDB](https://arangodb.com) via [direct download](https://www.arangodb.com/download-major/) or [homebrew](https://formulae.brew.sh/formula/arangodb). Alternately, if you've got Docker installed, you can use Spidergram's included docker-compose.yml file to spin up an Arango container for testing and development.
+3. Create a new project directory, cd into it, and run `npx create-spidergram`. You'll be prompted for the project's name and your choice of project template.
 4. Run `npm install`
 5. Kick the tires with `npm run crawl <url>`, or dive right in to customizing the project.
