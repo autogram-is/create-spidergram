@@ -1,10 +1,7 @@
 import {
   Spider,
   Project,
-  HtmlTools,
-  Query,
-  aql,
-  HierarchyTools
+  HtmlTools
 } from 'spidergram';
 
 await Project.config();
@@ -31,12 +28,3 @@ const spider = new Spider({
 });
 
 console.log(await spider.run(args));
-
-const urls = await Query.run(aql`
-  FOR r IN resources
-  FILTER r.code == 200
-  RETURN r.url
-`);
-
-const hierarchy = new HierarchyTools.UrlHierarchyBuilder().add(urls);
-console.log(hierarchy.findLargestRoot()?.render());

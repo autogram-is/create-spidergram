@@ -4,18 +4,17 @@
   "description": "Initialize a new Spidergram based project",
   "main": "index.js",
   "type": "module",
+  "workspaces": [
+    "templates/boilerplate-js",
+    "templates/boilerplate-ts",
+    "templates/seo-ts"
+  ],
   "scripts": {
     "create": "node index.js"
   },
   "bin": {
     "create-spidergram": "./bin/create-spidergram.js"
   },
-  "workspaces": [
-    "packages/boilerplate-js",
-    "packages/boilerplate-ts",
-    "packages/example-audit-ts",
-    "packages/example-plugins-ts"
-  ],
   "author": {
     "name": "Autogram",
     "email": "team@autogram.is",

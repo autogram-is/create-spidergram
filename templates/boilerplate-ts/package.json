@@ -1,0 +1,24 @@
+{
+  "name": "create-spidergram-boilerplate-ts",
+  "version": "0.8.4",
+  "description": "Simple crawler (Typescript)",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "^18.1.0"
+  },
+  "type": "module",
+  "scripts": {
+    "startup": "docker-compose up -d",
+    "shutdown": "docker-compose stop",
+    "crawl": "ts-node-esm src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.0",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "spidergram": "^0.8.4"
+  }
+}

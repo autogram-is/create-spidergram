@@ -44,9 +44,9 @@ async function setup() {
       name: 'template',
       message: 'Project template',
       choices: [
-        { name: 'Simple crawler' , value: 'boilerplate' },
-        { name: 'Simple crawler (Typescript)' , value: 'boilerplate-ts' },
-        { name: 'Analysis pipeline demo (Typescript)' , value: 'pipeline-ts' }
+        { name: 'Boilerplate project' , value: 'boilerplate-js' },
+        { name: 'Boilerplate project (Typescript)' , value: 'boilerplate-ts' },
+        { name: 'Crawl with report (Typescript)' , value: 'report-ts' }
       ],
       default: template
     }
@@ -56,7 +56,8 @@ async function setup() {
 }
 
 function clone(name, template) {
-  const ignore = ['./DS_Store', 'node_modules', 'dist'];
+  // Can't be too safe.
+  const ignore = ['.DS_Store', 'storage', 'node_modules', 'dist'];
   const templateDir = path.join(__dirname, 'projects', template);
   const targetDir = process.cwd();
 
