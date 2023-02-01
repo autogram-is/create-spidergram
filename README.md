@@ -15,4 +15,3 @@
 - **Boilerplate** is a simple script that fires up a Spidergram crawler, grabs the contents of one or more sites, and prints out a summary report of their URL structures.
 - **Boilerplate (Typescript)** is a Typescript version of Boilerplate, with no other functional differences.
 - **Crawl with Report (Typescript)** demonstrates basic data extraction and report generation in plaintext and Excel formats.
-- **Blog analysis (Typescript)** uses the markup patterns of an example site to extract detailed page data and visualize its publishing patterns over ten years.
