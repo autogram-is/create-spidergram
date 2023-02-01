@@ -1,6 +1,6 @@
 {
   "name": "create-spidergram-boilerplate-js",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Simple crawler",
   "main": "index.js",
   "engines": {
@@ -13,6 +13,6 @@
     "crawl": "node index.js"
   },
   "dependencies": {
-    "spidergram": "^0.8.4"
+    "spidergram": "^0.8.5"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "create-spidergram-report-ts",
-  "version": "0.8.4",
+  "version": "0.8.5",
   "description": "Crawl report (Typescript)",
   "main": "dist/index.js",
   "type": "module",
@@ -22,6 +22,6 @@
     "@types/html-to-text": "^9.0.0"
   },
   "dependencies": {
-    "spidergram": "^0.8.4"
+    "spidergram": "^0.8.5"
   }
 }

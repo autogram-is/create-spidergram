@@ -46,7 +46,8 @@ async function setup() {
       choices: [
         { name: 'Boilerplate project' , value: 'boilerplate-js' },
         { name: 'Boilerplate project (Typescript)' , value: 'boilerplate-ts' },
-        { name: 'Crawl with report (Typescript)' , value: 'report-ts' }
+        { name: 'Crawl with report (Typescript)' , value: 'report-ts' },
+        { name: 'Blog analysis (Typescript)' , value: 'blog-ts' }
       ],
       default: template
     }
