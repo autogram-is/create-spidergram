@@ -1,10 +1,13 @@
 import {
+  Spidergram,
   Spider,
   HtmlTools,
   UrlMatchStrategy,
 } from 'spidergram';
 
-export async function crawl(urls: string[],) {
+export async function crawl(urls: string[]) {
+  const sg = await Spidergram.load();
+
   // The options object passed into the spider can control almost every
   // aspect of the crawl, including the functions that process each found
   // page.
@@ -40,10 +43,12 @@ export async function crawl(urls: string[],) {
     },
   });
 
-  spider.on('requestComplete', (status, url) => 
-    console.log(`[${status.finished} of ${status.total}] - ${url}`)
-  );
-
+  spider.on('requestComplete', status => sg.cli.progress(status) );
+  spider.on('crawlComplete', status => {
+    sg.cli.done();
+    console.log(sg.cli.summarizeStatus(status));
+  });
+  
   return spider.run(urls);
 }
 

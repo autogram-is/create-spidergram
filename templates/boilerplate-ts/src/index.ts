@@ -1,10 +1,8 @@
 import {
+  Spidergram,
   Spider,
-  Project,
   HtmlTools
 } from 'spidergram';
-
-await Project.config();
 
 const args = process.argv.slice(2);
 
@@ -12,6 +10,7 @@ if (args.length == 0) {
   console.log('One or more target URLs must be entered.');
 }
 
+const sg = await Spidergram.load();
 const spider = new Spider({
   maxConcurrency: 4,
   maxRequestsPerMinute: 180,
@@ -27,4 +26,10 @@ const spider = new Spider({
   },
 });
 
-console.log(await spider.run(args));
+spider.on('requestComplete', status => sg.cli.progress(status) );
+spider.on('crawlComplete', status => {
+  sg.cli.done();
+  console.log(sg.cli.summarizeStatus(status));
+});
+
+await spider.run(args);
