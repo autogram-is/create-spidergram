@@ -12,6 +12,7 @@
     "shutdown": "docker-compose stop",
     "crawl": "ts-node-esm src/index.ts",
     "reset": "ts-node-esm src/reset.ts",
+    "spidergram": "node_modules/spidergram/bin/run.js",
     "build": "tsc"
   },
   "devDependencies": {

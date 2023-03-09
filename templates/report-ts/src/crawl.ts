@@ -28,7 +28,7 @@ export async function crawl(urls: string[]) {
       // page content right now, but other tasks — running custom JS,
       // taking screenshots, etc — can all be done here.
       const body = await page.content();
-      const data = HtmlTools.getPageData(body);
+      const data = await HtmlTools.getPageData(body);
       await saveResource({ body, data });
       
       // The enqueueUrls helper function scans the current page for links,

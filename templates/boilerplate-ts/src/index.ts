@@ -18,8 +18,8 @@ const spider = new Spider({
     const { page, saveResource, enqueueUrls } = context;
 
     const body = await page.content();
-    const data = HtmlTools.getPageData(body);
-    const content = HtmlTools.getPageContent(body);
+    const data = await HtmlTools.getPageData(body);
+    const content = await HtmlTools.getPageContent(body);
     await saveResource({ body, data, content });
     
     await enqueueUrls();

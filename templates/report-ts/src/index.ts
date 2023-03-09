@@ -10,10 +10,10 @@ if (args.length == 0) {
 }
 
 console.log('Crawling pages…')
-console.log(await crawl(args));
+await crawl(args);
 
 console.log('Parsing page content…')
-console.log(await findContent(true));
+await findContent(true);
 
 console.log('Generating reports…')
-console.log(await generateReports());
+await generateReports();

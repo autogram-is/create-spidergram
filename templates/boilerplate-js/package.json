@@ -10,6 +10,7 @@
   "scripts": {
     "startup": "docker-compose up -d",
     "shutdown": "docker-compose stop",
+    "spidergram": "node_modules/spidergram/bin/run.js",
     "crawl": "node index.js"
   },
   "dependencies": {

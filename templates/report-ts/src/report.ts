@@ -43,9 +43,9 @@ export async function generateReports() {
   const summary = await new Query('resources')
     .aggregate('AvgSize', 'average', 'size')
     .aggregate('AvgWords', 'average', 'content.readability.words')
-    .groupBy('parsed.hostname', 'Host')
-    .groupBy('code', 'Status')
-    .groupBy('mime', 'Mime')
+    .groupBy('Host', 'parsed.hostname')
+    .groupBy('Status', 'code')
+    .groupBy('Mime', 'mime')
     .run<Record<string, string | number>>();
 
   const pages = await new Query('resources')
@@ -63,7 +63,6 @@ export async function generateReports() {
     .return('words', 'content.readability.words')
     .return('sentences', 'content.readability.sentences')
     .return('readability', 'content.readability.score')
-    .return('author', 'content,author')
     .run<Record<string, string | number>>();
 
   const report = new FileTools.Spreadsheet();

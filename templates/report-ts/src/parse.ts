@@ -40,20 +40,21 @@ export async function findContent(reset = false) {
     resource.content = {
       // Generate a plaintext version of the page content and calculate its readability
       // score. If no selectors are passed in, 'body' is used as the default.
-      ...HtmlTools.getPageContent($, { selector: ['article', 'main', 'div.content', 'body'] }),
+      ...await HtmlTools.getPageContent($, { selector: ['article', 'main', 'div.content', 'body'] }),
 
       // Custom cheerio selectors are often handy here, too.
       headline: $('h1').first().text().trim(),
 
       // Populate other content properties with structured data parsed during the crawl
       title: resource.get('data.meta.og.title') ?? resource.get('data.title'),
-      type: resource.get('data.meta.og.type', 'Unknown'),
+      type: resource.get('data.meta.og.type', 'unknown'),
       description: resource.get('data.meta.og.description') ?? resource.get('data.meta.description'),
       published: resource.get('data.meta.og.article.published_time'),
       author: resource.get('data.meta.og.article.author'),
       tags: resource.get('data.meta.og.article:tags'),
     };
 
-    return sg.arango.push(resource).then(() => resource.url);
+    await sg.arango.push(resource);
+    return Promise.resolve();
   });
 }
