@@ -25,8 +25,8 @@ const spider = new Spider({
   },
 });
 
-sg.on('requestComplete', status => sg.cli.progress(status) );
-sg.on('crawlComplete', status => {
+sg.on('progress', status => sg.cli.progress(status) );
+sg.on('end', status => {
   sg.cli.done();
   console.log(sg.cli.summarizeStatus(status));
 });

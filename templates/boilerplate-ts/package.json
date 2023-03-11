@@ -23,6 +23,6 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
-    "spidergram": "^0.9.0"
+    "spidergram": "^0.9.3"
   }
 }

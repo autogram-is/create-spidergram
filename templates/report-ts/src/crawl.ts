@@ -43,8 +43,8 @@ export async function crawl(urls: string[]) {
     },
   });
 
-  spider.on('requestComplete', status => sg.cli.progress(status) );
-  spider.on('crawlComplete', status => {
+  spider.on('progress', status => sg.cli.progress(status) );
+  spider.on('end', status => {
     sg.cli.done();
     console.log(sg.cli.summarizeStatus(status));
   });
