@@ -44,10 +44,11 @@ async function setup() {
       name: 'template',
       message: 'Project template',
       choices: [
-        { name: 'JSON config for CLI , value: 'config-json' },
         { name: 'Boilerplate project' , value: 'boilerplate-js' },
         { name: 'Boilerplate project (Typescript)' , value: 'boilerplate-ts' },
         { name: 'Crawl with report (Typescript)' , value: 'report-ts' },
+        { name: 'JSON config', value: 'config-json' },
+        { name: 'YAML config', value: 'config-yaml' },
       ],
       default: template
     }

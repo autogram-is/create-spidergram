@@ -12,7 +12,8 @@
 
 ## The Templates
 
-- **JSON config** uses a static config file to control most Spidergram settings in conjunction with the globally-installed CLI. If you're interested in kicking the tires, just install this one, then `npm install -g spidergram`, `brew install docker-compose`, and `docker-compose up`. You're ready to Spidergram.
 - **Boilerplate** is an NPM project that fires up a Spidergram crawler, grabs the contents of one or more sites, and prints out a summary report of their URL structures.
 - **Boilerplate (Typescript)** is a Typescript version of Boilerplate, with no other functional differences.
 - **Crawl with Report (Typescript)** demonstrates basic data extraction and custom report generation in plaintext and Excel formats.
+- **JSON config** uses a static config file to control most Spidergram settings in conjunction with the globally-installed CLI. If you're interested in kicking the tires, just install this one, then `npm install -g spidergram`, `brew install docker-compose`, and `docker-compose up`. You're ready to Spidergram.
+- **YAML config** What if Spidergram, but YAML?
