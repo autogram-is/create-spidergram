@@ -1,0 +1,59 @@
+{
+  // The included Docker Compose file spins up a no-authentication instance
+  // of ArangoDB — it's simple to use for local crawling, but it's a good
+  // idea to set up a "real" server, even if it's running locally, once 
+  // you're done kicking the tires.
+  
+  "arango": {
+    "databaseName": "spidergram",
+    "url": "http://127.0.0.1:8529",
+    "auth": {
+      "username": "root",
+      "password": ""
+    }
+  },
+
+  // These options control the behavior of the Spider when it's actually
+  // crawling pages and searching them for new links. In a simple config
+  // file, you can change settings. In a .js or .ts configuration script,
+  // you can pass in custom URL filtering and response handling functions
+  // for more control.
+  "spider": {
+    "urlOptions": {
+
+      // Links will be labeled with these categories based on
+      // the section of the page they're found in. Each key is 
+      // a region name, and each value is a CSS selector defining
+      // the region. By default, the 'regions' property is empty
+      // and saved links are unlabeled.
+      "regions": {
+        "header": "header",
+        "footer": "footer",
+        "main": "body"
+      }
+    },
+    
+    // Non-HTML files are recorded but not downloaded by default.
+    // Adding mime types here (wildcards are supported) tells Spidergram
+    // to save them locally for futue analysis.
+    "downloadMimeTypes": ["application/pdf"],
+    "userAgent": "MyCustomSpider"
+  },
+
+  // Spidergram uses a global URL normalizer to ensure that the same
+  // rules are applied consistently and pages aren't re-visited needlessly.
+  // The default URL normalizer is configurable, but a custom function can be
+  // passed in instead of this settings object when using a .js or .ts
+  // configuration script.
+  "urlNormalizer": {
+    // "forceProtocol": "https:",
+    // "forceLowercase": "host",
+    // "discardSubdomain": "ww*",
+    // "discardAnchor": true,
+    // "discardAuth": true,
+    // "discardIndex": "**/{index,default}.{htm,html,aspx,php}",
+    // "discardSearch": "!{page,p}",
+    // "sortSearchParams": true,
+    "discardTrailingSlash": true  // false by default
+  }
+}
